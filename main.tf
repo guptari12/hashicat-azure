@@ -7,7 +7,9 @@ resource "azurerm_resource_group" "myresourcegroup" {
   location = var.location
 
   tags = {
+    
     Department = "devops"
+    Billable   = "true"
     environment = "Production"
   }
 }
