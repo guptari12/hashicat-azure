@@ -6,8 +6,7 @@ resource "azurerm_resource_group" "myresourcegroup" {
   name     = "${var.prefix}-workshop"
   location = var.location
 
-  tags = {
-    
+  tags = {    
     Department = "devops"
     Billable   = "true"
     environment = "Production"
@@ -125,7 +124,10 @@ resource "azurerm_virtual_machine" "catapp" {
     disable_password_authentication = false
   }
 
-  tags = {}
+  tags = {
+    Department = "devops"
+    Billable   = "true"
+  }
 }
 
 # We're using a little trick here so we can run the provisioner without
